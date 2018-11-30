@@ -1,7 +1,7 @@
 {
   "name": "node-captcha",
   "version": "1.0.0",
-  "description": "A demo how we can use captcha is used in node.js",
+  "description": "A demo to show how to use captcha in node.js",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",

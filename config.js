@@ -3,7 +3,7 @@ const captchaConfig = {
 	params : {
 		cookie: 'captcha',
 		color:'#0064cd',
-		background: 'rgb(20,30,200)'	
+		background: 'rgb(232, 242, 159)'	
 	},
 	captchaUrl : '/captcha.jpg'
 };

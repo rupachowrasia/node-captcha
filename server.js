@@ -9,7 +9,7 @@ const captcha = require('captcha').create(captchaConfig.params);
 
 // configure session store
 app.use(session({
-    secret: 'secretkeywillgohere',
+    secret: 'SECRETKEYWILLGOHERE',
     resave: false,
     saveUninitialized: true,
 }));
@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
     res.type('html')
     res.end(`
         <img src="${captchaConfig.captchaUrl}"/>
-        <form action="/login" method="post">
+        <form action="/check" method="post">
             <input type="text" name="captchaDigits"/>
             <input type="submit"/>
         </form>
@@ -32,10 +32,10 @@ app.get('/', (req, res) => {
 });
 
 // validate captcha
-app.post('/login', (req, res) => {
+app.post('/check', (req, res) => {
     res.type('html')
     res.end(`
-        <p>CAPTCHA VALID: ${ captcha.check(req, req.body.captchaDigits) }</p>
+        <p>IS CAPTCHA VALID: ${ captcha.check(req, req.body.captchaDigits) }</p>
     `)
 });
 
