@@ -18,6 +18,9 @@ $ npm start
 > While npm install you may encounter some error, because captcha module requires canvas as one of its dependency which in turn requires several library to install.
 Plesae refer this page - https://www.npmjs.com/package/canvas
 
+> If your npm install fails, just refer the page above and install pacakges as per your OS type and your are done. Now again do npm install, this time it will not fail. 
+Please note - you don't need to install canvas or captcha module separately, installing packages from link above will work.
+
 > I encountered some error during npm install, since I am using ubuntu this command worked for me.
 ```sh
 sudo apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
